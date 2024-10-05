@@ -22,12 +22,12 @@ removeOnSpill: false
 /* Vanilla JS to add a new task */
 function addTask() {
 	/* Get task text from input */
-	var inputTask = document.getElementById("taskText").value;
+	var inputTask = document.getElementById("textbox").value;
 	/* Add task to the 'To Do' column */
 	document.getElementById("to-do").innerHTML +=
 		"<li class='task'><p>" + inputTask + "</p></li>";
 	/* Clear task text from input after adding task */
-	document.getElementById("taskText").value = "";
+	document.getElementById("textbox").value = "";
 }
 
 /* Vanilla JS to delete tasks in 'Trash' column */
