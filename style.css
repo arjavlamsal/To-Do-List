@@ -11,15 +11,15 @@ html {
 body {
 	font-size: 1.6rem;
 	font-family: "Poppins", sans-serif;
+	background: linear-gradient(135deg, #845ec2, #b39cd0);
+	min-height: 100vh;
 }
 
 .add-task-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
 	width: 100%;
-	background: linear-gradient(135deg, #845ec2, #b39cd0);
 }
 
 .todo-app {
@@ -32,7 +32,7 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.2rem 0.8rem;
 }
 
-.todo-app h1 {
+.todo-app h1,h4 {
 	color: #4f1787;
 	display: flex;
 	align-items: center;
@@ -72,51 +72,131 @@ button {
 	cursor: pointer;
 }
 
-ul li {
-	list-style: none;
-	padding: 1rem 0.8rem 1rem 5rem;
-	user-select: none;
-	cursor: pointer;
-	position: relative;
+.main-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: baseline;
 }
 
-ul li::before {
-	content: "";
-	position: absolute;
-	height: 2.8rem;
-	width: 2.8rem;
-	/* 	border-radius: 50%; */
-	background-image: url(https://cdn.discordapp.com/attachments/1290843633171566695/1290849999625781269/WhatsApp_Image_2024-10-01_at_17.31.45-removebg-preview.png?ex=66fdf53e&is=66fca3be&hm=5333a476dc46c0a79f666a6e90c2063dfb3bbd20f700e443958b764ed19cb8fe&);
-	background-size: cover;
-	background-position: center;
-	margin: 0rem -4rem;
+.columns {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	margin: 1.6rem auto;
+	width: 80%;
+	color: #bfc9d4;
 }
 
-ul li.checked {
-	color: #555;
-	text-decoration: line-through;
+.column {
+	width: 100%;
+	flex: 1;
+	margin: 0 10px;
+	position: relative;
+	background: linear-gradient(to right, #ece9e6, #ffffff);
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 18px 20px 10.3px -23px rgb(0 0 0 / 15%);	
 }
 
-ul li.checked::before {
-	background-image: url(https://cdn.discordapp.com/attachments/1290843633171566695/1290849999395225622/WhatsApp_Image_2024-10-01_at_17.31.44-removebg-preview.png?ex=66fdf53e&is=66fca3be&hm=49004145e8ef336488180a158e37a51493170cd6d0c750ea7b94d512e6769f06&);
+.column-header {
+	font-size: 17px;
+	justify-content: center;
 }
 
-ul li span {
-	color: #555;
-	width: 4rem;
-	height: 4rem;
-	font-size: 2.2rem;
-	line-height: 4rem;
-	border-radius: 50%;
+.column-header h4 {
 	text-align: center;
-	position: absolute;
-	right: 0;
-	top: 5px;
+	padding-left: 30%;
+	padding-top: 10%;
 }
 
-ul li span:hover {
-	background: #edeef0;
+.task-list {
+	min-height: 3rem;
 }
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 5%;
+	padding-top: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.column-button {
+	text-align: center;
+	padding: 0.1rem;
+}
+
+.button {
+	font-family: "Arimo", sans-serif;
+	font-weight: 700;
+	border: #000013 0.14rem solid;
+	border-radius: 0.2rem;
+	color: #000013;
+	padding: 0.6rem 1rem;
+	margin-bottom: 0.3rem;
+	cursor: pointer;
+}
+
+.delete-button {
+	background-color: #ff4444;
+	margin: 0.1rem auto 0.6rem auto;
+	padding: 0 1rem;
+	height: 3.8rem;
+	border-style: none;
+	color: white;
+}
+
+.delete-button:hover {
+	background-color: #fa7070;
+}
+
+.add-button {
+	background-color: #7a1cac;
+	padding: 0 1rem;
+	height: 3.8rem;
+	width: 10rem;
+	margin-top: 0.6rem;
+	color: white;
+	border-style: none;
+
+}
+
+.add-button:hover {
+	background-color: #50C878;
+}
+
+
+
+
+.task {
+	background: #15B392;
+	color: white;
+	margin: 0.4rem;
+	height: 4rem;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	list-style-type: none;
+	transition: all 0.3s;
+	cursor: move;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+
+.task p {
+	margin: auto;
+	padding: 5%;
+}
+
+
+
+
