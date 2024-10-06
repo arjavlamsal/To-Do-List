@@ -1,0 +1,363 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: "Poppins", sans-serif;
+	background: linear-gradient(135deg, #845ec2, #b39cd0);
+	min-height: 100vh;
+}
+
+.add-task-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.todo-app {
+	width: 100%;
+	max-width: 54rem;
+	margin: 10rem auto 2rem;
+	padding: 4rem 3rem;
+	border-radius: 1rem;
+	background: linear-gradient(to right, #ece9e6, #ffffff);
+	box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.2rem 0.8rem;
+}
+
+.todo-app h1,h4 {
+	color: #4f1787;
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.todo-app i {
+	margin-right: 1rem;
+}
+
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 3rem;
+	padding-left: 2rem;
+	margin-bottom: 2.5rem;
+	background-color: #f5f5f7;
+}
+
+input {
+	flex: 1;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	padding: 1rem;
+}
+
+button {
+	border: none;
+	outline: none;
+	padding: 1.6rem 5rem;
+	background-color: #7a1cac;
+	color: #f5f7f8;
+	font-weight: 800;
+	border-radius: 4rem;
+	cursor: pointer;
+}
+
+.main-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+.columns {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	margin: 1.6rem auto;
+	width: 80%;
+	color: #bfc9d4;
+}
+
+.column {
+	width: 100%;
+	flex: 1;
+	margin: 0 10px;
+	position: relative;
+	background: linear-gradient(to right, #ece9e6, #ffffff);
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 18px 20px 10.3px -23px rgb(0 0 0 / 15%);	
+}
+
+.column-header {
+	font-size: 17px;
+	justify-content: center;
+}
+
+.column-header h4 {
+	text-align: center;
+	padding-left: 30%;
+	padding-top: 10%;
+}
+
+.task-list {
+	min-height: 3rem;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 5%;
+	padding-top: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.column-button {
+	text-align: center;
+	padding: 0.1rem;
+}
+
+.button {
+	font-family: "Arimo", sans-serif;
+	font-weight: 700;
+	border: #000013 0.14rem solid;
+	border-radius: 0.2rem;
+	color: #000013;
+	padding: 0.6rem 1rem;
+	margin-bottom: 0.3rem;
+	cursor: pointer;
+}
+
+.delete-button {
+	background-color: #ff4444;
+	margin: 0.1rem auto 0.6rem auto;
+	padding: 0 1rem;
+	height: 3.8rem;
+	border-style: none;
+	color: white;
+}
+
+.delete-button:hover {
+	background-color: #fa7070;
+}
+
+.add-button {
+	background-color: #7a1cac;
+	padding: 0 1rem;
+	height: 3.8rem;
+	width: 10rem;
+	margin-top: 0.6rem;
+	color: white;
+	border-style: none;
+
+}
+
+.add-button:hover {
+	background-color: #50C878;
+}
+
+
+
+
+.task {
+	background: #15B392;
+	color: white;
+	margin: 0.4rem;
+	height: 4rem;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	list-style-type: none;
+	transition: all 0.3s;
+	cursor: move;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+
+.task p {
+	margin: auto;
+	padding: 5%;
+}
+
+
+.footer {
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 2em;
+    gap: 10px;
+    display: flex;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+    background-color: black;
+  }
+
+.footer .header {
+    font-size: 30px;
+    color: white;
+    font-family: Rubik Mono One;
+    flex-basis: 100%;
+}
+  
+  div.right {
+    margin: 0;
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    gap: 10px;
+    flex: 1;
+  }
+  
+  div.left {
+    flex-basis: 100%;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    width: 50%;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  textarea {
+    font-family: Azeret Mono;
+    box-sizing: border-box;
+    color: whitesmoke;
+    outline: none;
+    resize: none;
+    border: none;
+    padding: 1.5em;
+    border-radius: 10px;
+    background-color: #252930;
+  }
+  
+  .msg {
+    flex-basis: 100%;
+  }
+  
+  div.bottom {
+    min-width: 0;
+    overflow-x: scroll;
+    padding: 1em;
+    gap: 2em;
+    color: grey;
+    width: 100%;
+    flex-basis: 100%;
+    display: flex;
+  }
+  
+  .ftrtxt {
+    flex-basis: 100%;
+    font-size: 15px;
+    text-align: center;
+    font-family: Rubik Mono One;
+    color: grey;
+  }
+  
+  .ftrhead {
+    font-size: 35px;
+  }
+  
+  .ftrhead::after,
+  .ftrtxt::after {
+    content: "\a";
+    white-space: pre;
+  }
+  
+  .ftrlinks {
+    flex-basis: 1;
+  }
+  
+  hr {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    flex-basis: 100%;
+    border: solid 1px grey;
+  }
+  
+  svg {
+    fill: white;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  
+  svg:hover {
+    transform: scale(1.1);
+    fill: grey;
+  }
+  
+  ::placeholder {
+    font-family: Azeret Mono;
+  }
+  
+  #start {
+    margin-left: auto;
+  }
+  
+  #end {
+    margin-right: auto;
+  }
+  
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 2px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: none;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 10px;
+    height: 5px;
+    width: 2px;
+  }
+  
+  #submitbtn {
+    display: none;
+    border-radius: 10px;
+    border: none;
+    font-family: Rubik Mono One;
+    font-size: 15px;
+    transition: 0.5s;
+  }
+  
+  #submitbtn:hover {
+    background-color: var(--lightblk);
+    color: white;
+  }
+  
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      height: 0%;
+      border-radius: 10px;
+    }
+    100% {
+      opacity: 1;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+
+
